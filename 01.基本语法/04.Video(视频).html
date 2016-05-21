@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Video(视频)</title>
+    <style media="screen">
+      #id{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div_button">
+      <button type="button" name="button" onclick="playPause()">播放/暂停</button>
+      <button type="button" name="button" onclick="makeBig()">放大</button>
+      <button type="button" name="button" onclick="makeSmall()">缩小</button>
+      <button type="button" name="button" onclick="makeNormal()">普通</button>
+      <br>
+      <video id="video1" width="400">
+        <source src="http://" type="video/mp4">
+        <source src="http://" type="video/ogg">
+        您的浏览器不支持
+      </video>
+    </div>
+    <script type="text/javascript">
+      var mVideo = document.getElementById('video1');
+      function palyPause(){
+        if (mVideo.paused) {
+          mVideo.play();
+        } else {
+          mVideo.pause();
+        }
+      }
+      function makeBig(){
+        mVideo.width = 600;
+      }
+      function makeSmall(){
+        mVideo.width = 400;
+      }
+      function makeNormal(){
+        mVideo.width = 500;
+      }
+    </script>
+  </body>
+</html>
