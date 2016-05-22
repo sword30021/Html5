@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Input类型</title>
+  </head>
+  <body onload="getTheDateTime()">
+    <h2>Color</h2>
+    <input type="color" name="favcolor" value="red">
+    <h2>Date</h2>
+    <input type="date" name="mDay" value="2016-05-21">
+    <form class="" action="index.html" method="post">
+      <h2>DateTime</h2>
+      <input type="datetime" name="mTime" id="mTime">
+      <input type="submit">
+    </form>
+    <form class="" action="index.html" method="post">
+      <h2>DateTime-Local</h2>
+      <input type="datetime-local" name="mDatetime" value="">
+      <input type="submit">
+    </form>
+    <form class="" action="index.html" method="post">
+      <h2>Email</h2>
+      <input type="email" name="mEmail" value="">
+      <input type="submit">
+    </form>
+    <form class="" action="index.html" method="post">
+      <h2>Month</h2>
+      <input type="month" name="name" value="">
+      <input type="submit">
+    </form>
+    <form class="" action="index.html" method="post">
+      <h2>Number</h2>
+      <input type="number" name="name" value="2" min="1" max="5">
+      <input type="submit">
+    </form>
+    <form class="" action="index.html" method="post">
+      <h2>Range</h2>
+      <input type="range" name="name" value="5" min="1" max="10">
+      <input type="submit" />
+    </form>
+    <form class="" action="index.html" method="post">
+      <h2>Search</h2>
+      <input type="search" name="name" value="">
+      <input type="submit">
+    </form>
+    <form class="" action="index.html" method="post">
+      <h2>Tel</h2>
+      <input type="tel" name="name" value="">
+      <input type="submit">
+    </form>
+    <form class="" action="index.html" method="post">
+      <h2>Time</h2>
+      <input type="time" name="name" value="">
+      <input type="submit">
+    </form>
+    <form class="" action="index.html" method="post">
+      <h2>Url</h2>
+      <input type="url" name="name" value="">
+      <input type="submit">
+    </form>
+    <form class="" action="index.html" method="post">
+      <h2>Week</h2>
+      <input type="week" name="name" value="">
+      <input type="submit">
+    </form>
+    <script type="text/javascript">
+      function getTheDateTime(){
+        var mCurTime = new Date();
+        var mTime = document.getElementById('mTime');
+        mTime.value = mCurTime.getFullYear() + "-"
+        + (mCurTime.getMonth()+1 + "-"
+        + mCurTime.getDate() + " "
+        + mCurTime.getHours() + ":"
+        + mCurTime.getMinutes() + ":"
+        + mCurTime.getSeconds());
+      }
+    </script>
+  </body>
+</html>
