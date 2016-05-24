@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>表单元素</title>
+  </head>
+  <body>
+    <h2>DataList</h2>
+    <form class="" action="index.html" method="post">
+      <input name="name" list="browsers">
+      <datalist id="browsers">
+        <option value="Html5">
+        <option value="Css3">
+        <option value="JavaScript">
+      </datalist>
+      <input type="submit">
+    </form>
+    <h2>KeyGen</h2>
+    <form action="demo_keygen.php" method="get">
+      用户名: <input type="text" name="usr_name">
+      加密: <keygen name="security">
+      <input type="submit">
+    </form>
+    <h2>OutPut</h2>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+      <input type="range" id="a" value="50">100
+      +<input type="number" id="b" value="50">
+      =<output name="x" for="a b"></output>
+    </form>
+  </body>
+</html>
