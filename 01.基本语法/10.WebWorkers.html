@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="../1.js/demo_workers.js"></script>
+    <title>WebWorkers</title>
+  </head>
+  <body>
+    <p>
+      计数：
+      <output name="result"></output>
+    </p>
+    <button onclick="startWorker()">开始工作</button>
+    <button onclick="stopWorker()">停止工作</button>
+    <script type="text/javascript">
+      var count;
+      function startWorker() {
+        if (typeof(Worker) !== "undefined") {
+          if (typeof(count) == "undefined") {
+            count = new Worker("demo_workers.js");
+          }
+          count.onmessage = function(event){
+            document.getElementById('result').innerHTML = event.data;
+          } ;
+        } else {
+          document.getElementById('result').innerHTML = "不支持"；
+        }
+      }
+      function stopWorkers(){
+        count.terminate();
+        count = undefined;
+      }
+    </script>
+  </body>
+</html>
